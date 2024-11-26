@@ -26,7 +26,25 @@ class VehicleController extends Controller
                 'totalUsers' => $totalUsers,
                 'totalVehicles' => $totalVehicles
             ]);
+
         }
+
+        public function indexview()
+    {
+        // Get all vehicles
+        $vehicles = Vehicle::all();
+
+        // Count total number of users and vehicles
+        $totalUsers = User::count();
+        $totalVehicles = Vehicle::count();
+
+        // Render the vehicle details page (`table.blade.php`) and pass the `vehicles`, `totalUsers`, and `totalVehicles` data
+        return view('vehicles.table', [
+            'vehicles' => $vehicles,
+            'totalUsers' => $totalUsers,
+            'totalVehicles' => $totalVehicles
+        ]);
+    }
     
         // Delete a vehicle by ID
         public function destroy($id)
