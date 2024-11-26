@@ -20,7 +20,12 @@ class VehicleController extends Controller
             $totalVehicles = Vehicle::count();
     
             // Return to the view with data
-            return view('vehicles.index', compact('vehicles', 'totalUsers', 'totalVehicles'));
+            //return view('vehicles.index', compact('vehicles', 'totalUsers', 'totalVehicles'));
+            return view('vehicles.index', [
+                'vehicles' => $vehicles,
+                'totalUsers' => $totalUsers,
+                'totalVehicles' => $totalVehicles
+            ]);
         }
     
         // Delete a vehicle by ID
