@@ -38,7 +38,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">MotorSales<sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -46,10 +46,12 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
+    <a class="nav-link" href="/">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+    </a>
+</li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -131,11 +133,12 @@
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+            <li class="nav-item">
+    <a class="nav-link" href="{{ route('vehicles.index') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span>
+    </a>
+</li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

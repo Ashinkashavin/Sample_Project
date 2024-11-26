@@ -14,6 +14,8 @@ Route::get('/', [TemplateController::class, 'index']);
 
 Route::get('/vehicles', [TemplateController::class, 'showVehicles'])->name('vehicles.index');
 
+Route::post('/vehicles', [VehicleController::class, 'store'])->name('vehicles.store');
+
 // Route for VehicleController - Display all vehicles
 //Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles.index');
 

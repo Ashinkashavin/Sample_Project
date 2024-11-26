@@ -29,6 +29,24 @@ class VehicleController extends Controller
 
         }
 
+        public function store(Request $request)
+    {
+        // Validate form input
+        $validatedData = $request->validate([
+            'make' => 'required|string|max:255',
+            'model' => 'required|string|max:255',
+            'year' => 'required|integer',
+            'price' => 'required|numeric',
+            
+        ]);
+
+        // Save data to the database
+        Vehicle::create($validatedData);
+
+        // Redirect with success message
+        return redirect()->back()->with('success', 'Car details saved successfully!');
+    }
+
         public function indexview()
     {
         // Get all vehicles
